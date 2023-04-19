@@ -1,0 +1,27 @@
+Из того что я увидел, не перенося код в IDE:
+
+0.  класс Car стоило бы сделать public
+
+1. Интерфейсы Movable и Stopable можно увязять в один интерфейс:
+
+         interface Movable {
+            void move();
+            void stop();
+}
+
+
+2.
+    public Engine engine;  - публичная переменная, и на нее идут геттер и сеттер без какой либо проверки логики - надо ее сделать private
+
+3.
+     - class Lorry extends Car, Moveable, Stopable - надо class Lorry extends Car implements Moveable, Stopable
+     - также в классе Lorry не переопределен метод open()
+     - нету аннотаций @Overrride - хотя они не обязательны
+
+
+4. нигде не вызывается метод start(); - соответественно нужны конструкторы, откуда метод будет вызываться
+
+5. класс LightWeightCar - вроде в порядке
+
+6.  В целом напрягает отсутствие конструкторов
+

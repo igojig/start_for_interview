@@ -116,7 +116,7 @@ public class MyLinkedList<T> implements Iterable<T>{
         }
         return temp.value;
     }
-    public void print_forward() {
+    public void printForward() {
         System.out.print("forward: ");
         Node<T> next = head;
         while (next != null) {
@@ -126,7 +126,7 @@ public class MyLinkedList<T> implements Iterable<T>{
         System.out.println();
     }
 
-   public void print_backward() {
+   public void printBackward() {
         System.out.print("backward: ");
         Node<T> prev = tail;
         while (prev != null) {
@@ -137,8 +137,8 @@ public class MyLinkedList<T> implements Iterable<T>{
     }
 
     public void print(){
-        print_forward();
-        print_backward();
+        printForward();
+        printBackward();
     }
 
     public int getLength(){

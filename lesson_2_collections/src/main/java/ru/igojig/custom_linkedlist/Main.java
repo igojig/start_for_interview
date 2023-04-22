@@ -64,8 +64,8 @@ public class Main {
     }
 
     public static void print_all(MyLinkedList<?> list) {
-        list.print_forward();
-        list.print_backward();
+        list.printForward();
+        list.printBackward();
         System.out.println();
     }
 }

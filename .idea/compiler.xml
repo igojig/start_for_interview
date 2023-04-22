@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="lesson_1_oop" />
         <module name="start_for_interview" />
+        <module name="lesson_2_collections" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

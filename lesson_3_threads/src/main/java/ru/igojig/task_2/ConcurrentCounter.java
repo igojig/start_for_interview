@@ -42,7 +42,7 @@ public class ConcurrentCounter {
         catch (InterruptedException e){
             e.printStackTrace();
         }
-// не корректно, но для проверки, наверное можно бросить Exception
+// не корректно, но для проверки. Наверное можно бросить Exception
         return -1;
     }
 

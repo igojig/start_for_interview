@@ -2,9 +2,9 @@ package ru.igojig.task_1;
 
 public class PingPong {
 
-    private static final int COUNT = 20;
+    private static final int COUNT = 200000;
 
-    private boolean flag=true;
+    private boolean flag = true;
 
     public static void main(String[] args) {
 
@@ -12,13 +12,13 @@ public class PingPong {
 
         Runnable r1 = () -> {
             for (int i = 0; i < COUNT; i++) {
-                pingPong.ping();
+                pingPong.print();
             }
         };
 
         Runnable r2 = () -> {
             for (int i = 0; i < COUNT; i++) {
-                pingPong.pong();
+                pingPong.print();
             }
         };
 
@@ -26,31 +26,41 @@ public class PingPong {
         new Thread(r2).start();
     }
 
-    synchronized void ping()  {
-        while (!flag){
-            try{
+    synchronized public void print() {
+
+        if (flag) {
+            System.out.println("ping");
+        } else {
+            System.out.println("pong");
+        }
+
+        flag = !flag;
+
+    }
+
+    synchronized void ping() {
+        while (!flag) {
+            try {
                 wait();
-            }
-            catch (InterruptedException e){
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
         System.out.println("ping");
-        flag=false;
+        flag = false;
         notify();
     }
 
     synchronized void pong() {
-        while (flag){
-            try{
+        while (flag) {
+            try {
                 wait();
-            }
-            catch (InterruptedException e){
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
         System.out.println("pong");
-        flag=true;
+        flag = true;
         notify();
     }
 }

@@ -13,6 +13,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="lesson_4_DB" target="17" />
       <module name="rtet" target="17" />
     </bytecodeTargetLevel>
   </component>

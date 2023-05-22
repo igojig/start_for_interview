@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="lesson_1_oop" />
         <module name="lesson_3_threads" />
+        <module name="lesson_6_servlets" />
         <module name="lesson_5_Hibernate" />
         <module name="start_for_interview" />
         <module name="lesson_2_collections" />
